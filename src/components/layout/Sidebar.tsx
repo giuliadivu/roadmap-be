@@ -2,8 +2,10 @@ import { NavLink } from 'react-router'
 import { roadmap, sectionPath } from '../../data/roadmap'
 
 const linkBase = 'block rounded-md px-3 py-1.5 text-sm transition-colors'
-const linkInactive = 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
-const linkActive = 'bg-indigo-50 font-medium text-indigo-700'
+const linkInactive =
+  'text-slate-600 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-white'
+const linkActive =
+  'bg-indigo-50 font-medium text-indigo-700 dark:bg-indigo-500/10 dark:text-indigo-300'
 
 function navClass({ isActive }: { isActive: boolean }) {
   return `${linkBase} ${isActive ? linkActive : linkInactive}`
@@ -25,18 +27,18 @@ export function Sidebar() {
               </NavLink>
             ) : (
               <span
-                className={`${linkBase} cursor-default text-slate-400`}
+                className={`${linkBase} cursor-default text-slate-400 dark:text-slate-600`}
                 title="In arrivo"
               >
                 {section.title}
-                <span className="ml-2 rounded bg-slate-100 px-1.5 py-0.5 text-[10px] tracking-wide uppercase">
+                <span className="ml-2 rounded bg-slate-100 px-1.5 py-0.5 text-[10px] tracking-wide uppercase dark:bg-slate-800">
                   presto
                 </span>
               </span>
             )}
 
             {section.status === 'available' && section.topics && (
-              <ul className="mt-1 ml-3 space-y-0.5 border-l border-slate-200 pl-2">
+              <ul className="mt-1 ml-3 space-y-0.5 border-l border-slate-200 pl-2 dark:border-slate-800">
                 {section.topics.map((topic) => (
                   <li key={topic.slug}>
                     <NavLink

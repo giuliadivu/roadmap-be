@@ -1,6 +1,6 @@
-import { Link } from 'react-router'
 import { ContentPage } from '../../../components/ContentPage'
-import { getSection, sectionPath } from '../../../data/roadmap'
+import { TopicCardList } from '../../../components/TopicCardList'
+import { getSection } from '../../../data/roadmap'
 
 const section = getSection('learn-about-apis')!
 
@@ -28,21 +28,7 @@ export default function LearnAboutApis() {
 
       <h2>Cosa copre questa sezione</h2>
       <p>I sei aspetti chiave nel lavorare con le API:</p>
-      <ul className="not-prose mt-4 grid gap-3 sm:grid-cols-2">
-        {section.topics?.map((topic) => (
-          <li key={topic.slug}>
-            <Link
-              to={sectionPath(section.slug, topic.slug)}
-              className="block h-full rounded-lg border border-slate-200 bg-white p-4 transition-colors hover:border-indigo-300 hover:shadow-sm"
-            >
-              <span className="font-medium text-slate-900">{topic.title}</span>
-              <span className="mt-1 block text-sm text-slate-600">
-                {topic.summary}
-              </span>
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <TopicCardList section={section} />
     </ContentPage>
   )
 }
