@@ -9,7 +9,13 @@
  * Il riferimento è la roadmap ufficiale: https://roadmap.sh/backend
  */
 
-export type ResourceType = 'official' | 'article' | 'video' | 'course'
+export type ResourceType =
+  | 'official'
+  | 'article'
+  | 'video'
+  | 'course'
+  | 'roadmap'
+  | 'opensource'
 
 export interface Resource {
   label: string
@@ -156,37 +162,302 @@ export const roadmap: Section[] = [
       },
     ],
   },
-
-  // --- Sezioni successive della roadmap (placeholder, ancora senza rotta) ---
   {
-    slug: 'internet',
-    title: 'Internet',
-    summary: 'Come funziona Internet, HTTP/HTTPS, DNS, hosting e domini.',
-    status: 'planned',
+    slug: 'relational-databases',
+    title: 'Relational Databases',
+    summary:
+      'Dati in tabelle (righe/colonne) interrogati con SQL, con chiavi e vincoli per l’integrità e transazioni ACID. Es. PostgreSQL, MySQL, Oracle.',
+    status: 'available',
+    resources: [
+      {
+        label: 'Databases and SQL (edX)',
+        url: 'https://www.edx.org/course/databases-5-sql',
+        type: 'course',
+        note: 'Corso che parte dai concetti dei database relazionali e dal linguaggio SQL.',
+      },
+      {
+        label: 'Relational Databases — IBM',
+        url: 'https://www.ibm.com/cloud/learn/relational-databases',
+        type: 'article',
+        note: 'Panoramica su tabelle, chiavi, relazioni e perché garantiscono forte consistenza.',
+      },
+      {
+        label: 'Intro To Relational Databases (Udacity)',
+        url: 'https://www.udacity.com/course/intro-to-relational-databases--ud197',
+        type: 'course',
+        note: 'Introduzione pratica alla modellazione dei dati e alle query relazionali.',
+      },
+      {
+        label: 'What is a Relational Database',
+        url: 'https://youtu.be/OqjJjpjDRLc',
+        type: 'video',
+        note: 'Spiegazione video sintetica del modello relazionale.',
+      },
+    ],
+    topics: [
+      {
+        slug: 'migrations',
+        title: 'Database Migrations',
+        summary:
+          'Script versionati che evolvono lo schema del database in modo controllato e ripetibile tra ambienti.',
+        resources: [
+          {
+            label: 'Schema migration — Wikipedia',
+            url: 'https://en.wikipedia.org/wiki/Schema_migration',
+            type: 'article',
+            note: 'Definizione generale e concetti di base delle migrazioni di schema.',
+          },
+          {
+            label: 'What is Database Migration? — MongoDB',
+            url: 'https://www.mongodb.com/resources/basics/databases/database-migration',
+            type: 'article',
+            note: 'Tipi di migrazione (schema vs dati) e perché servono.',
+          },
+          {
+            label:
+              "Introduction to Database Migration: A Beginner's Guide — dbvis",
+            url: 'https://www.dbvis.com/thetable/introduction-to-database-migration-a-beginners-guide/',
+            type: 'article',
+            note: 'Esempi di script (ALTER TABLE), tool (Flyway, Alembic, Django) e best practice.',
+          },
+          {
+            label: 'Database Migrations Explained',
+            url: 'https://www.youtube.com/watch?v=mMsZPZKNc4g',
+            type: 'video',
+            note: 'Spiegazione video del flusso up/down e del versionamento.',
+          },
+        ],
+      },
+      {
+        slug: 'n-plus-one',
+        title: 'N+1 Problem',
+        summary:
+          'Una query per la lista + N query per i dati correlati di ogni elemento: query inefficienti che degradano le performance.',
+        resources: [
+          {
+            label: 'In Detail Explanation of N+1 Problem — Medium (Doctolib)',
+            url: 'https://medium.com/doctolib/understanding-and-fixing-n-1-query-30623109fe89',
+            type: 'article',
+            note: 'Analisi dettagliata del problema e di come individuarlo e risolverlo.',
+          },
+          {
+            label: 'What is the N+1 Problem — PlanetScale',
+            url: 'https://planetscale.com/blog/what-is-n-1-query-problem-and-how-to-solve-it',
+            type: 'article',
+            note: 'Esempio concreto con misure (≈10x più lento) e soluzione via JOIN/query unica.',
+          },
+          {
+            label: 'SQLite and the N+1 (no) problem',
+            url: 'https://www.youtube.com/watch?v=qPfAQY_RahA',
+            type: 'video',
+            note: 'Punto di vista in cui, con il DB locale, l’N+1 pesa molto meno.',
+          },
+        ],
+      },
+    ],
   },
   {
-    slug: 'pick-a-language',
-    title: 'Pick a Language',
-    summary: 'Scegliere un linguaggio backend (Node.js, Java, Go, Python…).',
-    status: 'planned',
-  },
-  {
-    slug: 'version-control',
-    title: 'Version Control Systems',
-    summary: 'Git e le piattaforme di hosting del codice.',
-    status: 'planned',
-  },
-  {
-    slug: 'databases',
-    title: 'Databases',
-    summary: 'Database relazionali e NoSQL, indici, transazioni.',
-    status: 'planned',
-  },
-  {
-    slug: 'apis',
-    title: 'APIs',
-    summary: 'REST, JSON APIs, GraphQL, autenticazione e autorizzazione.',
-    status: 'planned',
+    slug: 'learn-about-apis',
+    title: 'Learn about APIs',
+    summary:
+      'Cos’è un’API e come si progetta, documenta e protegge: stili, OpenAPI, autenticazione, web security, hashing e best practice.',
+    status: 'available',
+    resources: [
+      {
+        label: 'What is an API? — AWS',
+        url: 'https://aws.amazon.com/what-is/api/',
+        type: 'article',
+        note: 'Definizione chiara di API: endpoint, metodi e formati di scambio dati.',
+      },
+      {
+        label: 'What is an API (in 5 minutes)',
+        url: 'https://www.youtube.com/watch?v=ByGJQzlzxQg',
+        type: 'video',
+        note: 'Introduzione rapida e visuale al concetto di API.',
+      },
+      {
+        label: 'API Design Roadmap — roadmap.sh',
+        url: 'https://roadmap.sh/api-design',
+        type: 'roadmap',
+        note: 'Percorso dedicato a come progettare bene un’API.',
+      },
+    ],
+    topics: [
+      {
+        slug: 'api-styles',
+        title: 'API Styles',
+        summary:
+          'I modi di strutturare la comunicazione client-server: REST, GraphQL, gRPC, SOAP.',
+        resources: [
+          {
+            label: 'What is a REST API? — Red Hat',
+            url: 'https://www.redhat.com/en/topics/api/what-is-a-rest-api',
+            type: 'article',
+            note: 'Lo stile più diffuso: risorse e verbi HTTP, stateless.',
+          },
+          {
+            label: 'GraphQL — sito ufficiale',
+            url: 'https://graphql.org/',
+            type: 'official',
+            note: 'Un solo endpoint: il client chiede esattamente i campi che gli servono.',
+          },
+          {
+            label: 'gRPC — sito ufficiale',
+            url: 'https://grpc.io/',
+            type: 'official',
+            note: 'RPC ad alte prestazioni su HTTP/2 con Protocol Buffers (binario).',
+          },
+          {
+            label: 'SOAP vs REST vs GraphQL vs gRPC',
+            url: 'https://www.youtube.com/watch?v=4vLxWqE94l4',
+            type: 'video',
+            note: 'Confronto diretto dei quattro stili e di quando usarli.',
+          },
+        ],
+      },
+      {
+        slug: 'open-api-specs',
+        title: 'Open API Specs',
+        summary:
+          'OpenAPI (ex Swagger): descrivere un’API REST in YAML/JSON come fonte di verità leggibile da umani e macchine.',
+        resources: [
+          {
+            label: 'OpenAPI Specification — sito ufficiale',
+            url: 'https://swagger.io/specification/',
+            type: 'official',
+            note: 'Lo standard per descrivere endpoint, formati e autenticazione.',
+          },
+          {
+            label: 'Swagger Editor',
+            url: 'https://swagger.io/tools/swagger-editor/',
+            type: 'official',
+            note: 'Editor live per scrivere e validare una spec OpenAPI.',
+          },
+          {
+            label: 'OpenAPI 3.0: How to Design and Document APIs',
+            url: 'https://www.youtube.com/watch?v=6kwmW_p_Tig',
+            type: 'video',
+            note: 'Come progettare e documentare un’API con OpenAPI 3.0.',
+          },
+        ],
+      },
+      {
+        slug: 'authentication',
+        title: 'Authentication',
+        summary:
+          'Verificare l’identità del client (chi sei) — distinta dall’autorizzazione (cosa puoi fare). API key, sessioni, token, JWT, OAuth, SSO.',
+        resources: [
+          {
+            label: 'Basic Authentication — roadmap.sh',
+            url: 'https://roadmap.sh/guides/basic-authentication',
+            type: 'article',
+            note: 'Il metodo più semplice: credenziali nell’header. Solo su HTTPS.',
+          },
+          {
+            label: 'Token Based Authentication — roadmap.sh',
+            url: 'https://roadmap.sh/guides/token-authentication',
+            type: 'article',
+            note: 'Autenticazione stateless basata su token al posto della sessione.',
+          },
+          {
+            label: 'JWT Authentication — roadmap.sh',
+            url: 'https://roadmap.sh/guides/jwt-authentication',
+            type: 'article',
+            note: 'Token firmati e self-contained: cosa sono e come usarli.',
+          },
+          {
+            label: 'OAuth — roadmap.sh',
+            url: 'https://roadmap.sh/guides/oauth',
+            type: 'article',
+            note: 'Delegare l’accesso a terze parti (es. “login con Google”).',
+          },
+        ],
+      },
+      {
+        slug: 'web-security',
+        title: 'Web Security',
+        summary:
+          'Proteggere l’applicazione dalle minacce comuni: injection, XSS, CSRF; difese come validazione input, HTTPS, header di sicurezza.',
+        resources: [
+          {
+            label: 'Why HTTPS Matters — Google',
+            url: 'https://developers.google.com/web/fundamentals/security/encrypt-in-transit/why-https',
+            type: 'article',
+            note: 'Perché cifrare il traffico con TLS è il punto di partenza.',
+          },
+          {
+            label: 'OWASP Web Application Security Testing Checklist',
+            url: 'https://github.com/0xRadi/OWASP-Web-Checklist',
+            type: 'opensource',
+            note: 'Checklist pratica per verificare la sicurezza di un’app web.',
+          },
+          {
+            label: 'Cybersecurity Roadmap — roadmap.sh',
+            url: 'https://roadmap.sh/cyber-security',
+            type: 'roadmap',
+            note: 'Percorso dedicato per approfondire la sicurezza.',
+          },
+          {
+            label: '7 Security Risks and Hacking Stories for Web Developers',
+            url: 'https://www.youtube.com/watch?v=4YOpILi9Oxs',
+            type: 'video',
+            note: 'Rischi reali raccontati con esempi concreti.',
+          },
+        ],
+      },
+      {
+        slug: 'hashing-algorithms',
+        title: 'Hashing Algorithms',
+        summary:
+          'Le password si fanno in hash (one-way), non si cifrano. Hash lenti con salt (bcrypt, scrypt) vs hash veloci (MD5, SHA) inadatti alle password.',
+        resources: [
+          {
+            label: 'Understanding bcrypt — Auth0',
+            url: 'https://auth0.com/blog/hashing-in-action-understanding-bcrypt/',
+            type: 'article',
+            note: 'Come bcrypt usa salt e work factor per rallentare il brute force.',
+          },
+          {
+            label: 'Wikipedia — scrypt',
+            url: 'https://en.wikipedia.org/wiki/Scrypt',
+            type: 'article',
+            note: 'Hash “memory-hard”: resistente anche ad hardware dedicato.',
+          },
+          {
+            label: 'Why is MD5 not safe?',
+            url: 'https://infosecscout.com/why-md5-is-not-safe/',
+            type: 'article',
+            note: 'Perché MD5 (e gli hash veloci) non vanno usati per le password.',
+          },
+          {
+            label: 'What is SHA?',
+            url: 'https://www.encryptionconsulting.com/education-center/what-is-sha/',
+            type: 'article',
+            note: 'La famiglia SHA: ottima per integrità/checksum, non per password.',
+          },
+        ],
+      },
+      {
+        slug: 'api-security-best-practices',
+        title: 'API Security Best Practices',
+        summary:
+          'La checklist trasversale per mettere in sicurezza un’API: HTTPS, auth robusta, validazione input, rate limiting, minimi privilegi, monitoraggio.',
+        resources: [
+          {
+            label: 'API Security Best Practices Roadmap — roadmap.sh',
+            url: 'https://roadmap.sh/api-security-best-practices',
+            type: 'roadmap',
+            note: 'Percorso dedicato con tutte le pratiche di sicurezza per le API.',
+          },
+          {
+            label: 'OWASP API Security Project (Top 10)',
+            url: 'https://owasp.org/www-project-api-security/',
+            type: 'opensource',
+            note: 'I rischi di sicurezza più critici delle API e come mitigarli.',
+          },
+        ],
+      },
+    ],
   },
 ]
 

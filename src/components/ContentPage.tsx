@@ -6,7 +6,7 @@ interface ContentPageProps {
   title: string
   summary: string
   resources?: Resource[]
-  children: ReactNode
+  children?: ReactNode
 }
 
 /**
@@ -28,7 +28,9 @@ export function ContentPage({
         <p className="mt-2 text-lg text-slate-600">{summary}</p>
       </header>
 
-      <div className="prose prose-slate max-w-none">{children}</div>
+      {children && (
+        <div className="prose prose-slate max-w-none">{children}</div>
+      )}
 
       <ResourceList resources={resources} />
     </article>

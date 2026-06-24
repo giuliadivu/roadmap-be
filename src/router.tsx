@@ -11,6 +11,16 @@ import Html from './pages/sections/frontend-basics/Html'
 import Css from './pages/sections/frontend-basics/Css'
 import JavaScript from './pages/sections/frontend-basics/JavaScript'
 import Browsers from './pages/sections/frontend-basics/Browsers'
+import RelationalDatabases from './pages/sections/relational-databases/RelationalDatabases'
+import Migrations from './pages/sections/relational-databases/Migrations'
+import NPlusOne from './pages/sections/relational-databases/NPlusOne'
+import LearnAboutApis from './pages/sections/learn-about-apis/LearnAboutApis'
+import ApiStyles from './pages/sections/learn-about-apis/ApiStyles'
+import OpenApiSpecs from './pages/sections/learn-about-apis/OpenApiSpecs'
+import Authentication from './pages/sections/learn-about-apis/Authentication'
+import WebSecurity from './pages/sections/learn-about-apis/WebSecurity'
+import HashingAlgorithms from './pages/sections/learn-about-apis/HashingAlgorithms'
+import ApiSecurityBestPractices from './pages/sections/learn-about-apis/ApiSecurityBestPractices'
 
 /**
  * Registry slug → componente di pagina.
@@ -20,6 +30,8 @@ import Browsers from './pages/sections/frontend-basics/Browsers'
 const sectionComponents: Record<string, ComponentType> = {
   introduction: Introduction,
   'frontend-basics': FrontendBasics,
+  'relational-databases': RelationalDatabases,
+  'learn-about-apis': LearnAboutApis,
 }
 
 const topicComponents: Record<string, ComponentType> = {
@@ -27,6 +39,14 @@ const topicComponents: Record<string, ComponentType> = {
   'frontend-basics/css': Css,
   'frontend-basics/javascript': JavaScript,
   'frontend-basics/browsers': Browsers,
+  'relational-databases/migrations': Migrations,
+  'relational-databases/n-plus-one': NPlusOne,
+  'learn-about-apis/api-styles': ApiStyles,
+  'learn-about-apis/open-api-specs': OpenApiSpecs,
+  'learn-about-apis/authentication': Authentication,
+  'learn-about-apis/web-security': WebSecurity,
+  'learn-about-apis/hashing-algorithms': HashingAlgorithms,
+  'learn-about-apis/api-security-best-practices': ApiSecurityBestPractices,
 }
 
 /** Genera le rotte delle sezioni navigabili a partire dalla config. */

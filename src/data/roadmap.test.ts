@@ -23,6 +23,29 @@ describe('roadmap config', () => {
     ])
   })
 
+  it('Relational Databases ha macro-risorse e le micro migrations + n-plus-one', () => {
+    const section = getSection('relational-databases')
+    expect(section?.status).toBe('available')
+    expect((section?.resources ?? []).length).toBeGreaterThan(0)
+    expect(section?.topics?.map((t) => t.slug)).toEqual([
+      'migrations',
+      'n-plus-one',
+    ])
+  })
+
+  it('Learn about APIs ha le 6 micro sezioni richieste', () => {
+    const section = getSection('learn-about-apis')
+    expect(section?.status).toBe('available')
+    expect(section?.topics?.map((t) => t.slug)).toEqual([
+      'api-styles',
+      'open-api-specs',
+      'authentication',
+      'web-security',
+      'hashing-algorithms',
+      'api-security-best-practices',
+    ])
+  })
+
   it('ha slug di sezione univoci', () => {
     const slugs = roadmap.map((s) => s.slug)
     expect(new Set(slugs).size).toBe(slugs.length)

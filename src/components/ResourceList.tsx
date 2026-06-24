@@ -5,6 +5,8 @@ const typeLabels: Record<Resource['type'], string> = {
   article: 'Articolo',
   video: 'Video',
   course: 'Corso',
+  roadmap: 'Roadmap',
+  opensource: 'Open source',
 }
 
 interface ResourceListProps {
