@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react'
 import type { Resource } from '../data/roadmap'
+import { NextTopicCta } from './NextTopicCta'
 import { ResourceList } from './ResourceList'
 
 interface ContentPageProps {
@@ -37,6 +38,8 @@ export function ContentPage({
       )}
 
       <ResourceList resources={resources} />
+
+      <NextTopicCta />
     </article>
   )
 }

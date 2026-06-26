@@ -4,6 +4,7 @@ import {
   availableSections,
   getSection,
   getTopic,
+  getNextTopic,
   sectionPath,
 } from './roadmap'
 
@@ -78,6 +79,14 @@ describe('roadmap config', () => {
       'vectors',
       'rags',
     ])
+  })
+
+  it('getNextTopic restituisce il successivo e undefined sull’ultimo', () => {
+    expect(getNextTopic('learn-the-basics', 'how-llms-work')?.slug).toBe(
+      'ai-vs-traditional-coding',
+    )
+    expect(getNextTopic('learn-the-basics', 'rags')).toBeUndefined()
+    expect(getNextTopic('introduction', 'whatever')).toBeUndefined()
   })
 
   it('ha slug di sezione univoci', () => {

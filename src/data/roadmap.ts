@@ -874,6 +874,18 @@ export function getTopic(
   return getSection(sectionSlug)?.topics?.find((t) => t.slug === topicSlug)
 }
 
+/** Il sotto-argomento successivo nella stessa sezione, se esiste. */
+export function getNextTopic(
+  sectionSlug: string,
+  topicSlug: string,
+): Topic | undefined {
+  const topics = getSection(sectionSlug)?.topics
+  if (!topics) return undefined
+  const idx = topics.findIndex((t) => t.slug === topicSlug)
+  if (idx === -1 || idx === topics.length - 1) return undefined
+  return topics[idx + 1]
+}
+
 /** Path della rotta per una sezione, opzionalmente con sotto-argomento. */
 export function sectionPath(sectionSlug: string, topicSlug?: string): string {
   return topicSlug ? `/${sectionSlug}/${topicSlug}` : `/${sectionSlug}`
