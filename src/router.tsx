@@ -30,6 +30,12 @@ import Nginx from './pages/sections/learn-about-web-servers/Nginx'
 import Apache from './pages/sections/learn-about-web-servers/Apache'
 import Caddy from './pages/sections/learn-about-web-servers/Caddy'
 import MsIis from './pages/sections/learn-about-web-servers/MsIis'
+import LearnTheBasics from './pages/sections/learn-the-basics/LearnTheBasics'
+import HowLlmsWork from './pages/sections/learn-the-basics/HowLlmsWork'
+import AiVsTraditionalCoding from './pages/sections/learn-the-basics/AiVsTraditionalCoding'
+import Embeddings from './pages/sections/learn-the-basics/Embeddings'
+import Vectors from './pages/sections/learn-the-basics/Vectors'
+import Rags from './pages/sections/learn-the-basics/Rags'
 
 /**
  * Registry slug → componente di pagina.
@@ -43,6 +49,7 @@ const sectionComponents: Record<string, ComponentType> = {
   'learn-about-apis': LearnAboutApis,
   caching: Caching,
   'learn-about-web-servers': LearnAboutWebServers,
+  'learn-the-basics': LearnTheBasics,
 }
 
 const topicComponents: Record<string, ComponentType> = {
@@ -65,6 +72,11 @@ const topicComponents: Record<string, ComponentType> = {
   'learn-about-web-servers/apache': Apache,
   'learn-about-web-servers/caddy': Caddy,
   'learn-about-web-servers/ms-iis': MsIis,
+  'learn-the-basics/how-llms-work': HowLlmsWork,
+  'learn-the-basics/ai-vs-traditional-coding': AiVsTraditionalCoding,
+  'learn-the-basics/embeddings': Embeddings,
+  'learn-the-basics/vectors': Vectors,
+  'learn-the-basics/rags': Rags,
 }
 
 /** Genera le rotte delle sezioni navigabili a partire dalla config. */

@@ -699,6 +699,165 @@ export const roadmap: Section[] = [
       },
     ],
   },
+  {
+    slug: 'learn-the-basics',
+    title: 'AI in Development: Learn the Basics',
+    summary:
+      'Le basi dell’AI nello sviluppo backend: come funzionano gli LLM, AI vs programmazione tradizionale e i mattoni delle app AI (embeddings, vettori, RAG).',
+    status: 'available',
+    resources: [
+      {
+        label: 'AI in software development — IBM',
+        url: 'https://www.ibm.com/think/topics/ai-in-software-development',
+        type: 'article',
+        note: 'Panoramica di come l’AI entra nel ciclo di sviluppo software.',
+      },
+      {
+        label: 'AI in Software Development — GitHub',
+        url: 'https://github.com/resources/articles/ai-in-software-development',
+        type: 'article',
+        note: 'Il punto di vista di GitHub su AI e produttività degli sviluppatori.',
+      },
+      {
+        label: 'AI in Software Development — Coursera',
+        url: 'https://www.coursera.org/articles/ai-in-software-development',
+        type: 'article',
+        note: 'Introduzione divulgativa all’impatto dell’AI sul coding.',
+      },
+    ],
+    topics: [
+      {
+        slug: 'how-llms-work',
+        title: 'How LLMs Work',
+        summary:
+          'I Large Language Model come motori di predizione: generano testo token per token a partire da distribuzioni di probabilità.',
+        resources: [
+          {
+            label: 'AI Engineer Roadmap — roadmap.sh',
+            url: 'https://roadmap.sh/ai-engineer',
+            type: 'roadmap',
+            note: 'Percorso dedicato per chi vuole approfondire l’AI engineering.',
+          },
+          {
+            label: 'What is a large language model (LLM)? — Cloudflare',
+            url: 'https://www.cloudflare.com/en-gb/learning/ai/what-is-large-language-model/',
+            type: 'article',
+            note: 'Spiegazione accessibile di cosa sia un LLM e come funziona.',
+          },
+          {
+            label: 'How Large Language Models Work',
+            url: 'https://www.youtube.com/watch?v=5sLYAQS9sWQ',
+            type: 'video',
+            note: 'Il funzionamento di un LLM spiegato a livello intuitivo.',
+          },
+        ],
+      },
+      {
+        slug: 'ai-vs-traditional-coding',
+        title: 'AI vs Traditional Coding',
+        summary:
+          'Programmazione tradizionale (istruzioni esplicite) vs sviluppo assistito dall’AI (modelli che generano e suggeriscono codice).',
+        resources: [
+          {
+            label: 'Vibe Coding Roadmap — roadmap.sh',
+            url: 'https://roadmap.sh/vibe-coding',
+            type: 'roadmap',
+            note: 'Percorso dedicato allo sviluppo assistito dall’AI.',
+          },
+          {
+            label: 'What is vibe coding? — IBM',
+            url: 'https://www.ibm.com/think/topics/vibe-coding',
+            type: 'article',
+            note: 'Cosa significa scrivere software “guidando” l’AI.',
+          },
+          {
+            label: 'AI Systems vs Traditional Coding',
+            url: 'https://www.youtube.com/watch?v=P7lryCIvxgA',
+            type: 'video',
+            note: 'Confronto tra i due approcci con esempi.',
+          },
+        ],
+      },
+      {
+        slug: 'embeddings',
+        title: 'Embeddings',
+        summary:
+          'Rappresentazioni vettoriali dense dei dati che catturano il significato: elementi simili finiscono vicini nello spazio.',
+        resources: [
+          {
+            label: 'What are Embeddings in Machine Learning? — Cloudflare',
+            url: 'https://www.cloudflare.com/en-gb/learning/ai/what-are-embeddings/',
+            type: 'article',
+            note: 'Cosa sono gli embedding e perché catturano la semantica.',
+          },
+          {
+            label: 'Getting Started With Embeddings — Hugging Face',
+            url: 'https://huggingface.co/blog/getting-started-with-embeddings',
+            type: 'article',
+            note: 'Guida pratica per generare e usare embedding.',
+          },
+          {
+            label: 'What are Word Embeddings?',
+            url: 'https://www.youtube.com/watch?v=wgfSDrqYMJ4',
+            type: 'video',
+            note: 'Gli embedding delle parole spiegati con esempi.',
+          },
+        ],
+      },
+      {
+        slug: 'vectors',
+        title: 'Vectors',
+        summary:
+          'Liste ordinate di numeri che rappresentano dati in uno spazio multi-dimensionale: permettono di misurare similarità e distanza.',
+        resources: [
+          {
+            label: 'A Gentle Introduction to Vectors for ML',
+            url: 'https://machinelearningmastery.com/gentle-introduction-vectors-machine-learning/',
+            type: 'article',
+            note: 'Introduzione ai vettori e alle operazioni di base nel ML.',
+          },
+          {
+            label: 'What is a vector database? — Cloudflare',
+            url: 'https://developers.cloudflare.com/vectorize/reference/what-is-a-vector-database/',
+            type: 'article',
+            note: 'Come si indicizzano i vettori per la ricerca per similarità.',
+          },
+          {
+            label: 'AI Foundations — What are Vectors?',
+            url: 'https://www.youtube.com/watch?v=dvDmXTKFtgQ',
+            type: 'video',
+            note: 'I vettori spiegati nel contesto dell’AI.',
+          },
+        ],
+      },
+      {
+        slug: 'rags',
+        title: 'RAG',
+        summary:
+          'Retrieval-Augmented Generation: recuperare dati rilevanti e passarli all’LLM come contesto per risposte accurate e aggiornate.',
+        resources: [
+          {
+            label: 'What is Retrieval Augmented Generation? — Datacamp',
+            url: 'https://www.datacamp.com/blog/what-is-retrieval-augmented-generation-rag',
+            type: 'article',
+            note: 'Cos’è il RAG e perché migliora l’affidabilità delle risposte.',
+          },
+          {
+            label: 'What is Retrieval-Augmented Generation? — Google Cloud',
+            url: 'https://cloud.google.com/use-cases/retrieval-augmented-generation',
+            type: 'article',
+            note: 'Il RAG spiegato con casi d’uso pratici.',
+          },
+          {
+            label: 'What is Retrieval-Augmented Generation? — IBM',
+            url: 'https://www.youtube.com/watch?v=T-D1OfcDW1M',
+            type: 'video',
+            note: 'Spiegazione video chiara del flusso retrieval + generation.',
+          },
+        ],
+      },
+    ],
+  },
 ]
 
 /** Solo le sezioni navigabili (con rotta). */

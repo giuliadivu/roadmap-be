@@ -68,6 +68,18 @@ describe('roadmap config', () => {
     ])
   })
 
+  it('Learn the Basics ha le 5 micro AI', () => {
+    const section = getSection('learn-the-basics')
+    expect(section?.status).toBe('available')
+    expect(section?.topics?.map((t) => t.slug)).toEqual([
+      'how-llms-work',
+      'ai-vs-traditional-coding',
+      'embeddings',
+      'vectors',
+      'rags',
+    ])
+  })
+
   it('ha slug di sezione univoci', () => {
     const slugs = roadmap.map((s) => s.slug)
     expect(new Set(slugs).size).toBe(slugs.length)
