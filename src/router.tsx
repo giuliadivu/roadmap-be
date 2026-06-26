@@ -21,6 +21,10 @@ import Authentication from './pages/sections/learn-about-apis/Authentication'
 import WebSecurity from './pages/sections/learn-about-apis/WebSecurity'
 import HashingAlgorithms from './pages/sections/learn-about-apis/HashingAlgorithms'
 import ApiSecurityBestPractices from './pages/sections/learn-about-apis/ApiSecurityBestPractices'
+import Caching from './pages/sections/caching/Caching'
+import Redis from './pages/sections/caching/Redis'
+import Memcached from './pages/sections/caching/Memcached'
+import HttpCaching from './pages/sections/caching/HttpCaching'
 
 /**
  * Registry slug → componente di pagina.
@@ -32,6 +36,7 @@ const sectionComponents: Record<string, ComponentType> = {
   'frontend-basics': FrontendBasics,
   'relational-databases': RelationalDatabases,
   'learn-about-apis': LearnAboutApis,
+  caching: Caching,
 }
 
 const topicComponents: Record<string, ComponentType> = {
@@ -47,6 +52,9 @@ const topicComponents: Record<string, ComponentType> = {
   'learn-about-apis/web-security': WebSecurity,
   'learn-about-apis/hashing-algorithms': HashingAlgorithms,
   'learn-about-apis/api-security-best-practices': ApiSecurityBestPractices,
+  'caching/redis': Redis,
+  'caching/memcached': Memcached,
+  'caching/http-caching': HttpCaching,
 }
 
 /** Genera le rotte delle sezioni navigabili a partire dalla config. */

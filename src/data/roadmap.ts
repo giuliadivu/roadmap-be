@@ -459,6 +459,113 @@ export const roadmap: Section[] = [
       },
     ],
   },
+  {
+    slug: 'caching',
+    title: 'Caching',
+    summary:
+      'Conservare copie dei dati in uno storage temporaneo e veloce per ridurre latenza e carico: strategie, Redis, Memcached e HTTP caching.',
+    status: 'available',
+    resources: [
+      {
+        label: 'What is caching? — Cloudflare',
+        url: 'https://www.cloudflare.com/en-gb/learning/cdn/what-is-caching/',
+        type: 'article',
+        note: 'Introduzione chiara al concetto di cache e ai suoi benefici.',
+      },
+      {
+        label: 'Top Caching Strategies Explained — ByteByteGo',
+        url: 'https://blog.bytebytego.com/p/top-caching-strategies',
+        type: 'article',
+        note: 'Cache-aside, read-through, write-through, write-around, write-back a confronto.',
+      },
+      {
+        label: 'Caching Complete Tutorial for Beginners',
+        url: 'https://www.youtube.com/watch?v=1XJG34mewts',
+        type: 'video',
+        note: 'Panoramica video del caching dalle basi.',
+      },
+    ],
+    topics: [
+      {
+        slug: 'redis',
+        title: 'Redis',
+        summary:
+          'Data store in-memory open source con strutture dati ricche (stringhe, liste, set, hash): cache, sessioni, real-time, message broker.',
+        resources: [
+          {
+            label: 'Redis Documentation',
+            url: 'https://redis.io/docs/latest/',
+            type: 'official',
+            note: 'Documentazione ufficiale: strutture dati, persistenza, clustering.',
+          },
+          {
+            label: 'Redis Roadmap — roadmap.sh',
+            url: 'https://roadmap.sh/redis',
+            type: 'roadmap',
+            note: 'Percorso dedicato per approfondire Redis a fondo.',
+          },
+          {
+            label: 'Redis Crash Course',
+            url: 'https://www.youtube.com/watch?v=XCsS_NVAa1g',
+            type: 'course',
+            note: 'Corso veloce e pratico per partire con Redis.',
+          },
+        ],
+      },
+      {
+        slug: 'memcached',
+        title: 'Memcached',
+        summary:
+          'Sistema di caching in-memory distribuito e minimale: una grande hash table key-value con eviction LRU.',
+        resources: [
+          {
+            label: 'memcached/memcached — README',
+            url: 'https://github.com/memcached/memcached#readme',
+            type: 'opensource',
+            note: 'Il progetto ufficiale, con panoramica e documentazione.',
+          },
+          {
+            label: 'Memcached Tutorial — TutorialsPoint',
+            url: 'https://www.tutorialspoint.com/memcached/index.htm',
+            type: 'article',
+            note: 'Tutorial introduttivo ai comandi e all’uso.',
+          },
+          {
+            label: 'Redis vs Memcached',
+            url: 'https://www.youtube.com/watch?v=Gyy1SiE8avE',
+            type: 'video',
+            note: 'Confronto diretto per capire quando scegliere l’uno o l’altro.',
+          },
+        ],
+      },
+      {
+        slug: 'http-caching',
+        title: 'HTTP Caching',
+        summary:
+          'Caching lato client e intermediari governato dagli header HTTP: Cache-Control, ETag, validazione e revalidation.',
+        resources: [
+          {
+            label: 'HTTP Caching — MDN',
+            url: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching',
+            type: 'official',
+            note: 'Riferimento completo su Cache-Control, ETag, Expires e validazione.',
+          },
+          {
+            label: 'Everything you need to know about HTTP Caching',
+            url: 'https://www.youtube.com/watch?v=HiBDZgTNpXY',
+            type: 'video',
+            note: 'Spiegazione visuale del funzionamento della cache HTTP.',
+          },
+          {
+            label: 'Client-side caching — Redis docs',
+            url: 'https://redis.io/docs/latest/develop/use/client-side-caching/',
+            type: 'article',
+            note: 'Come il caching lato client si combina con una cache server come Redis.',
+          },
+        ],
+      },
+    ],
+  },
 ]
 
 /** Solo le sezioni navigabili (con rotta). */

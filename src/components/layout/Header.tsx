@@ -3,7 +3,7 @@ import { ThemeToggle } from '../ThemeToggle'
 
 export function Header() {
   return (
-    <header className="border-b border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900">
+    <header className="shrink-0 border-b border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
         <Link
           to="/"

@@ -46,6 +46,17 @@ describe('roadmap config', () => {
     ])
   })
 
+  it('Caching ha le micro redis, memcached e http-caching', () => {
+    const section = getSection('caching')
+    expect(section?.status).toBe('available')
+    expect((section?.resources ?? []).length).toBeGreaterThan(0)
+    expect(section?.topics?.map((t) => t.slug)).toEqual([
+      'redis',
+      'memcached',
+      'http-caching',
+    ])
+  })
+
   it('ha slug di sezione univoci', () => {
     const slugs = roadmap.map((s) => s.slug)
     expect(new Set(slugs).size).toBe(slugs.length)

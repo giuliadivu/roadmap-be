@@ -17,8 +17,8 @@ function navClass({ isActive }: { isActive: boolean }) {
  */
 export function Sidebar() {
   return (
-    <aside className="w-60 shrink-0">
-      <nav className="sticky top-8 space-y-6">
+    <aside className="w-60 shrink-0 overflow-y-auto py-8">
+      <nav className="space-y-6">
         {roadmap.map((section) => (
           <div key={section.slug}>
             {section.status === 'available' ? (
