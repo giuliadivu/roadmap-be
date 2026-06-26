@@ -566,6 +566,139 @@ export const roadmap: Section[] = [
       },
     ],
   },
+  {
+    slug: 'learn-about-web-servers',
+    title: 'Learn about Web Servers',
+    summary:
+      'Il software che riceve richieste HTTP/HTTPS e serve contenuti o fa da reverse proxy verso l’app: Nginx, Apache, Caddy, MS IIS.',
+    status: 'available',
+    resources: [
+      {
+        label: 'What is a Web Server? — MDN',
+        url: 'https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_web_server',
+        type: 'article',
+        note: 'Distingue web server hardware e software e spiega cosa fa.',
+      },
+      {
+        label: 'What is a Web Server? — Hostinger',
+        url: 'https://www.hostinger.co.uk/tutorials/what-is-a-web-server',
+        type: 'article',
+        note: 'Introduzione pratica al ruolo del web server nell’hosting.',
+      },
+      {
+        label: 'Web Server Concepts and Examples',
+        url: 'https://youtu.be/9J1nJOivdyw',
+        type: 'video',
+        note: 'Panoramica video dei concetti con esempi concreti.',
+      },
+    ],
+    topics: [
+      {
+        slug: 'nginx',
+        title: 'Nginx',
+        summary:
+          'Web server e reverse proxy ad alte prestazioni con architettura event-driven: regge moltissime connessioni concorrenti.',
+        resources: [
+          {
+            label: 'Nginx — sito ufficiale',
+            url: 'https://nginx.org/',
+            type: 'official',
+            note: 'Sito e documentazione ufficiale di Nginx.',
+          },
+          {
+            label: 'NGINX Explained in 100 Seconds',
+            url: 'https://www.youtube.com/watch?v=JKxlsvZXG7c',
+            type: 'video',
+            note: 'Cos’è Nginx e a cosa serve, in pillole.',
+          },
+          {
+            label: 'NGINX Tutorial for Beginners',
+            url: 'https://www.youtube.com/watch?v=9t9Mp0BGnyI',
+            type: 'video',
+            note: 'Tutorial introduttivo alla configurazione.',
+          },
+        ],
+      },
+      {
+        slug: 'apache',
+        title: 'Apache',
+        summary:
+          'Apache HTTP Server: web server open source storico, modulare e flessibile, cuore dello stack LAMP.',
+        resources: [
+          {
+            label: 'Apache HTTP Server',
+            url: 'https://httpd.apache.org/',
+            type: 'official',
+            note: 'Sito ufficiale del progetto.',
+          },
+          {
+            label: 'Apache Server Documentation',
+            url: 'https://httpd.apache.org/docs/2.4/',
+            type: 'official',
+            note: 'Documentazione ufficiale (moduli, virtual host, configurazione).',
+          },
+          {
+            label: 'Apache vs NGINX',
+            url: 'https://www.youtube.com/watch?v=9nyiY-psbMs',
+            type: 'video',
+            note: 'Confronto tra i due web server più diffusi.',
+          },
+        ],
+      },
+      {
+        slug: 'caddy',
+        title: 'Caddy',
+        summary:
+          'Web server moderno in Go: HTTPS automatico con Let’s Encrypt e configurazione minimale.',
+        resources: [
+          {
+            label: 'Caddy — sito ufficiale',
+            url: 'https://caddyserver.com/',
+            type: 'official',
+            note: 'Sito e documentazione ufficiale di Caddy.',
+          },
+          {
+            label: 'caddyserver/caddy — GitHub',
+            url: 'https://github.com/caddyserver/caddy',
+            type: 'opensource',
+            note: 'Il progetto open source su GitHub.',
+          },
+          {
+            label: 'How to Make a Simple Caddy 2 Website',
+            url: 'https://www.youtube.com/watch?v=WgUV_BlHvj0',
+            type: 'video',
+            note: 'Esempio pratico di sito servito con Caddy.',
+          },
+        ],
+      },
+      {
+        slug: 'ms-iis',
+        title: 'MS IIS',
+        summary:
+          'Internet Information Services: il web server di Microsoft per Windows Server, integrato con l’ecosistema .NET.',
+        resources: [
+          {
+            label: 'Microsoft IIS — iis.net',
+            url: 'https://www.iis.net/',
+            type: 'official',
+            note: 'Sito ufficiale di IIS.',
+          },
+          {
+            label: 'Learn Windows Web Server IIS',
+            url: 'https://www.youtube.com/watch?v=1VdxPWwtISA',
+            type: 'video',
+            note: 'Introduzione all’uso di IIS su Windows Server.',
+          },
+          {
+            label: 'What is IIS?',
+            url: 'https://www.youtube.com/watch?v=hPWSqEXOjQY',
+            type: 'video',
+            note: 'Cos’è IIS e dove si usa, in breve.',
+          },
+        ],
+      },
+    ],
+  },
 ]
 
 /** Solo le sezioni navigabili (con rotta). */

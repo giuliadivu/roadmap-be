@@ -25,6 +25,11 @@ import Caching from './pages/sections/caching/Caching'
 import Redis from './pages/sections/caching/Redis'
 import Memcached from './pages/sections/caching/Memcached'
 import HttpCaching from './pages/sections/caching/HttpCaching'
+import LearnAboutWebServers from './pages/sections/learn-about-web-servers/LearnAboutWebServers'
+import Nginx from './pages/sections/learn-about-web-servers/Nginx'
+import Apache from './pages/sections/learn-about-web-servers/Apache'
+import Caddy from './pages/sections/learn-about-web-servers/Caddy'
+import MsIis from './pages/sections/learn-about-web-servers/MsIis'
 
 /**
  * Registry slug → componente di pagina.
@@ -37,6 +42,7 @@ const sectionComponents: Record<string, ComponentType> = {
   'relational-databases': RelationalDatabases,
   'learn-about-apis': LearnAboutApis,
   caching: Caching,
+  'learn-about-web-servers': LearnAboutWebServers,
 }
 
 const topicComponents: Record<string, ComponentType> = {
@@ -55,6 +61,10 @@ const topicComponents: Record<string, ComponentType> = {
   'caching/redis': Redis,
   'caching/memcached': Memcached,
   'caching/http-caching': HttpCaching,
+  'learn-about-web-servers/nginx': Nginx,
+  'learn-about-web-servers/apache': Apache,
+  'learn-about-web-servers/caddy': Caddy,
+  'learn-about-web-servers/ms-iis': MsIis,
 }
 
 /** Genera le rotte delle sezioni navigabili a partire dalla config. */

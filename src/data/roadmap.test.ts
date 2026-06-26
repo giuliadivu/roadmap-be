@@ -57,6 +57,17 @@ describe('roadmap config', () => {
     ])
   })
 
+  it('Web Servers ha le micro nginx, apache, caddy e ms-iis', () => {
+    const section = getSection('learn-about-web-servers')
+    expect(section?.status).toBe('available')
+    expect(section?.topics?.map((t) => t.slug)).toEqual([
+      'nginx',
+      'apache',
+      'caddy',
+      'ms-iis',
+    ])
+  })
+
   it('ha slug di sezione univoci', () => {
     const slugs = roadmap.map((s) => s.slug)
     expect(new Set(slugs).size).toBe(slugs.length)
