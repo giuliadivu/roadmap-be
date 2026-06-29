@@ -9,6 +9,7 @@ import Caching from './pages/sections/caching/Caching'
 import HttpCaching from './pages/sections/caching/HttpCaching'
 import Memcached from './pages/sections/caching/Memcached'
 import Redis from './pages/sections/caching/Redis'
+import CiCd from './pages/sections/ci-cd/CiCd'
 import Browsers from './pages/sections/frontend-basics/Browsers'
 import Css from './pages/sections/frontend-basics/Css'
 import FrontendBasics from './pages/sections/frontend-basics/FrontendBasics'
@@ -61,6 +62,7 @@ const sectionComponents: Record<string, ComponentType> = {
   'learn-about-web-servers': LearnAboutWebServers,
   'learn-the-basics': LearnTheBasics,
   'integration-patterns': IntegrationPatterns,
+  'ci-cd': CiCd,
 }
 
 const topicComponents: Record<string, ComponentType> = {

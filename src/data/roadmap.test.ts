@@ -111,6 +111,13 @@ describe('roadmap config', () => {
     ])
   })
 
+  it('CI/CD è una sezione a pagina singola (risorse, niente micro)', () => {
+    const section = getSection('ci-cd')
+    expect(section?.status).toBe('available')
+    expect((section?.resources ?? []).length).toBeGreaterThan(0)
+    expect(section?.topics).toBeUndefined()
+  })
+
   it('ha slug di sezione univoci', () => {
     const slugs = roadmap.map((s) => s.slug)
     expect(new Set(slugs).size).toBe(slugs.length)

@@ -1123,6 +1123,40 @@ export const roadmap: Section[] = [
       },
     ],
   },
+  {
+    slug: 'ci-cd',
+    title: 'CI/CD',
+    summary:
+      'Automatizzare build, test e deploy delle modifiche al codice: Continuous Integration e Continuous Delivery/Deployment.',
+    status: 'available',
+    resources: [
+      {
+        label: 'What is CI/CD? — GitLab',
+        url: 'https://about.gitlab.com/topics/ci-cd/',
+        type: 'article',
+        note: 'Spiegazione completa di CI, CD e della pipeline.',
+      },
+      {
+        label:
+          'A Primer: Continuous Integration and Continuous Delivery — The New Stack',
+        url: 'https://thenewstack.io/a-primer-continuous-integration-and-continuous-delivery-ci-cd/',
+        type: 'article',
+        note: 'Introduzione ai concetti e ai benefici di CI/CD.',
+      },
+      {
+        label: 'DevOps CI/CD Explained in 100 Seconds',
+        url: 'https://www.youtube.com/watch?v=scEDHsr3APg',
+        type: 'video',
+        note: 'Una panoramica rapidissima di cosa sia il CI/CD.',
+      },
+      {
+        label: 'Automate your Workflows with GitHub Actions',
+        url: 'https://www.youtube.com/watch?v=nyKZTKQS_EQ',
+        type: 'video',
+        note: 'Esempio pratico di pipeline con GitHub Actions.',
+      },
+    ],
+  },
 ]
 
 /** Solo le sezioni navigabili (con rotta). */
