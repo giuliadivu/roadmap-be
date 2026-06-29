@@ -81,6 +81,164 @@ export const roadmap: Section[] = [
         note: 'Spiega visivamente cosa succede a una richiesta dal client al server e ritorno.',
       },
     ],
+    topics: [
+      {
+        slug: 'how-does-the-internet-work',
+        title: 'How does the Internet work',
+        summary:
+          'Una rete globale di computer interconnessi via TCP/IP: come una richiesta viaggia da te al server e torna indietro.',
+        resources: [
+          {
+            label: 'How does the Internet Work? — cs.fyi',
+            url: 'https://cs.fyi/guide/how-does-internet-work',
+            type: 'article',
+            note: 'Guida chiara al percorso di una richiesta attraverso la rete.',
+          },
+          {
+            label: 'The Internet Explained — Vox',
+            url: 'https://www.vox.com/2014/6/16/18076282/the-internet',
+            type: 'article',
+            note: 'Panoramica divulgativa su cos’è e come nasce Internet.',
+          },
+          {
+            label: 'How does the internet work? (Full Course)',
+            url: 'https://www.youtube.com/watch?v=zN8YNNHcaZc',
+            type: 'video',
+            note: 'Corso video completo sui fondamenti della rete.',
+          },
+        ],
+      },
+      {
+        slug: 'what-is-http',
+        title: 'What is HTTP',
+        summary:
+          'Il protocollo request-response, stateless, su cui viaggia il web. Spesso usato con HTTPS per la cifratura.',
+        resources: [
+          {
+            label: 'What is HTTP? — Cloudflare',
+            url: 'https://www.cloudflare.com/en-gb/learning/ddos/glossary/hypertext-transfer-protocol-http/',
+            type: 'article',
+            note: 'Cos’è HTTP e come funziona il modello richiesta-risposta.',
+          },
+          {
+            label: 'Full HTTP Networking Course',
+            url: 'https://www.youtube.com/watch?v=2JYT5f2isg4',
+            type: 'course',
+            note: 'Corso approfondito su HTTP e networking.',
+          },
+          {
+            label: 'HTTP/1 to HTTP/2 to HTTP/3',
+            url: 'https://www.youtube.com/watch?v=a-sBfyiXysI',
+            type: 'video',
+            note: 'L’evoluzione del protocollo e cosa cambia tra le versioni.',
+          },
+        ],
+      },
+      {
+        slug: 'what-is-domain-name',
+        title: 'What is a Domain Name',
+        summary:
+          'Indirizzi leggibili dall’uomo (es. example.com) che mappano agli indirizzi IP delle macchine.',
+        resources: [
+          {
+            label: 'What is a Domain Name? — MDN',
+            url: 'https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_domain_name',
+            type: 'article',
+            note: 'Struttura di un dominio (SLD + TLD) e ruolo dei registrar.',
+          },
+          {
+            label: 'Domain Name vs URL — Cloudflare',
+            url: 'https://www.cloudflare.com/en-gb/learning/dns/glossary/what-is-a-domain-name/',
+            type: 'article',
+            note: 'Differenza tra nome di dominio e URL.',
+          },
+          {
+            label: 'A Beginners Guide to How Domain Names Work',
+            url: 'https://www.youtube.com/watch?v=Y4cRx19nhJk',
+            type: 'video',
+            note: 'Introduzione video al funzionamento dei domini.',
+          },
+        ],
+      },
+      {
+        slug: 'what-is-hosting',
+        title: 'What is Hosting',
+        summary:
+          'Lo spazio e le risorse server per pubblicare un sito: shared, VPS, dedicato, cloud.',
+        resources: [
+          {
+            label: 'Pages, sites, servers and search engines — MDN',
+            url: 'https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines',
+            type: 'article',
+            note: 'Chiarisce la differenza tra pagina, sito, web server e motore di ricerca.',
+          },
+          {
+            label: 'What is Web Hosting and How Does It Work?',
+            url: 'https://www.youtube.com/watch?v=H8oAvyqQwew',
+            type: 'video',
+            note: 'Cos’è l’hosting e come funziona, in breve.',
+          },
+          {
+            label: 'Different Types of Web Hosting Explained',
+            url: 'https://www.youtube.com/watch?v=AXVZYzw8geg',
+            type: 'video',
+            note: 'Confronto tra shared, VPS, dedicato e cloud hosting.',
+          },
+        ],
+      },
+      {
+        slug: 'dns-and-how-it-works',
+        title: 'DNS and how it works',
+        summary:
+          'Il sistema gerarchico che traduce i nomi di dominio in indirizzi IP: la “rubrica” di Internet.',
+        resources: [
+          {
+            label: 'Everything You Need to Know About DNS — cs.fyi',
+            url: 'https://cs.fyi/guide/everything-you-need-to-know-about-dns',
+            type: 'article',
+            note: 'Guida completa alla risoluzione DNS e ai suoi attori.',
+          },
+          {
+            label: 'What is DNS? — Cloudflare',
+            url: 'https://www.cloudflare.com/en-gb/learning/dns/what-is-dns/',
+            type: 'article',
+            note: 'Spiegazione chiara della gerarchia dei server DNS.',
+          },
+          {
+            label: 'How DNS works (comic)',
+            url: 'https://howdns.works/',
+            type: 'article',
+            note: 'Il DNS spiegato a fumetti, passo per passo.',
+          },
+        ],
+      },
+      {
+        slug: 'browsers-and-how-they-work',
+        title: 'Browsers and how they work',
+        summary:
+          'Come il browser interpreta HTML, CSS e JavaScript e renderizza la pagina (rendering e JS engine).',
+        resources: [
+          {
+            label: 'Populating the Page: How Browsers Work — MDN',
+            url: 'https://developer.mozilla.org/en-US/docs/Web/Performance/How_browsers_work',
+            type: 'article',
+            note: 'Dal parsing al rendering: il percorso critico di una pagina.',
+          },
+          {
+            label: 'How Browsers Work — Ramotion',
+            url: 'https://www.ramotion.com/blog/what-is-web-browser/',
+            type: 'article',
+            note: 'Panoramica sui componenti di un browser moderno.',
+          },
+          {
+            label: 'How Do Web Browsers Work?',
+            url: 'https://www.youtube.com/watch?v=5rLFYtXHo9s',
+            type: 'video',
+            note: 'Spiegazione video del funzionamento interno dei browser.',
+          },
+        ],
+      },
+    ],
   },
   {
     slug: 'frontend-basics',

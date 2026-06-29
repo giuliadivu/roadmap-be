@@ -5,7 +5,13 @@ import { roadmap } from './data/roadmap'
 import { RootLayout } from './components/layout/RootLayout'
 import Home from './pages/Home'
 import NotFound from './pages/NotFound'
-import Introduction from './pages/sections/Introduction'
+import Introduction from './pages/sections/introduction/Introduction'
+import HowDoesTheInternetWork from './pages/sections/introduction/HowDoesTheInternetWork'
+import WhatIsHttp from './pages/sections/introduction/WhatIsHttp'
+import WhatIsDomainName from './pages/sections/introduction/WhatIsDomainName'
+import WhatIsHosting from './pages/sections/introduction/WhatIsHosting'
+import DnsAndHowItWorks from './pages/sections/introduction/DnsAndHowItWorks'
+import BrowsersAndHowTheyWork from './pages/sections/introduction/BrowsersAndHowTheyWork'
 import FrontendBasics from './pages/sections/frontend-basics/FrontendBasics'
 import Html from './pages/sections/frontend-basics/Html'
 import Css from './pages/sections/frontend-basics/Css'
@@ -53,6 +59,12 @@ const sectionComponents: Record<string, ComponentType> = {
 }
 
 const topicComponents: Record<string, ComponentType> = {
+  'introduction/how-does-the-internet-work': HowDoesTheInternetWork,
+  'introduction/what-is-http': WhatIsHttp,
+  'introduction/what-is-domain-name': WhatIsDomainName,
+  'introduction/what-is-hosting': WhatIsHosting,
+  'introduction/dns-and-how-it-works': DnsAndHowItWorks,
+  'introduction/browsers-and-how-they-work': BrowsersAndHowTheyWork,
   'frontend-basics/html': Html,
   'frontend-basics/css': Css,
   'frontend-basics/javascript': JavaScript,

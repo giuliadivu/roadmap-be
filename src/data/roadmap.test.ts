@@ -89,6 +89,18 @@ describe('roadmap config', () => {
     expect(getNextTopic('introduction', 'whatever')).toBeUndefined()
   })
 
+  it('Introduction ha le 6 micro dei fondamentali di Internet', () => {
+    const section = getSection('introduction')
+    expect(section?.topics?.map((t) => t.slug)).toEqual([
+      'how-does-the-internet-work',
+      'what-is-http',
+      'what-is-domain-name',
+      'what-is-hosting',
+      'dns-and-how-it-works',
+      'browsers-and-how-they-work',
+    ])
+  })
+
   it('ha slug di sezione univoci', () => {
     const slugs = roadmap.map((s) => s.slug)
     expect(new Set(slugs).size).toBe(slugs.length)

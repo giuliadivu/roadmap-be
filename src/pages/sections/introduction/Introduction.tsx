@@ -1,5 +1,6 @@
-import { ContentPage } from '../../components/ContentPage'
-import { getSection } from '../../data/roadmap'
+import { ContentPage } from '../../../components/ContentPage'
+import { TopicCardList } from '../../../components/TopicCardList'
+import { getSection } from '../../../data/roadmap'
 
 const section = getSection('introduction')!
 
@@ -87,6 +88,13 @@ export default function Introduction() {
         richieste. I due dialogano tramite <strong>API</strong> sopra il
         protocollo HTTP.
       </p>
+
+      <h2>Le basi di Internet</h2>
+      <p>
+        Prima di addentrarsi nel backend, conviene avere chiari i fondamentali
+        su cui poggia tutto il web:
+      </p>
+      <TopicCardList section={section} />
     </ContentPage>
   )
 }
