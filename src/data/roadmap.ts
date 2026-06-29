@@ -1016,6 +1016,113 @@ export const roadmap: Section[] = [
       },
     ],
   },
+  {
+    slug: 'integration-patterns',
+    title: 'Integration Patterns',
+    summary:
+      'Soluzioni riutilizzabili per integrare funzionalità AI/LLM in un’applicazione: streaming delle risposte, structured outputs e function calling.',
+    status: 'available',
+    resources: [
+      {
+        label: 'Emerging Patterns in Building GenAI Products — Martin Fowler',
+        url: 'https://martinfowler.com/articles/gen-ai-patterns/',
+        type: 'article',
+        note: 'Rassegna autorevole dei pattern emergenti per prodotti GenAI.',
+      },
+      {
+        label: '5 Patterns for Scalable LLM Service Integration',
+        url: 'https://latitude.so/blog/5-patterns-for-scalable-llm-service-integration/',
+        type: 'article',
+        note: 'Pattern pratici per integrare un servizio LLM in modo scalabile.',
+      },
+      {
+        label: 'AI Design Patterns — LLM Integration',
+        url: 'https://www.youtube.com/watch?v=_amJOKrM0XU',
+        type: 'video',
+        note: 'Quando scegliere chiamate dirette, agenti, RAG, MCP o workflow.',
+      },
+    ],
+    topics: [
+      {
+        slug: 'streaming',
+        title: 'Streaming',
+        summary:
+          'Inviare la risposta dell’LLM token per token in tempo reale (streamed) invece di tutta insieme alla fine (unstreamed).',
+        resources: [
+          {
+            label: 'Streaming Responses in AI',
+            url: 'https://dev.to/pranshu_kabra_fe98a73547a/streaming-responses-in-ai-how-ai-outputs-are-generated-in-real-time-18kb',
+            type: 'article',
+            note: 'Come gli output AI vengono generati e inviati in tempo reale.',
+          },
+          {
+            label: 'AI for Web Devs: Faster Responses with HTTP Streaming',
+            url: 'https://austingil.com/ai-for-web-devs-streaming/',
+            type: 'article',
+            note: 'Lo streaming HTTP applicato alle risposte AI lato web.',
+          },
+          {
+            label: 'Master the OpenAI API: Stream Responses',
+            url: 'https://www.toolify.ai/gpts/master-the-openai-api-stream-responses-139447',
+            type: 'article',
+            note: 'Come consumare le risposte in streaming dall’API OpenAI.',
+          },
+        ],
+      },
+      {
+        slug: 'structured-outputs',
+        title: 'Structured Outputs',
+        summary:
+          'Far rispondere l’LLM in un formato strutturato (JSON/schema) invece che testo libero, per un parsing affidabile.',
+        resources: [
+          {
+            label: 'Diving Deeper with Structured Outputs',
+            url: 'https://medium.com/data-science/diving-deeper-with-structured-outputs-b4a5d280c208',
+            type: 'article',
+            note: 'Approfondimento su come e perché vincolare il formato dell’output.',
+          },
+          {
+            label: 'Structured model outputs — OpenAI',
+            url: 'https://platform.openai.com/docs/guides/structured-outputs',
+            type: 'official',
+            note: 'Guida ufficiale OpenAI agli output conformi a uno schema.',
+          },
+          {
+            label: 'Structured outputs — Claude',
+            url: 'https://platform.claude.com/docs/en/build-with-claude/structured-outputs',
+            type: 'official',
+            note: 'Guida ufficiale di Claude agli output strutturati.',
+          },
+        ],
+      },
+      {
+        slug: 'function-calling',
+        title: 'Function Calling',
+        summary:
+          'L’LLM decide quando invocare una funzione e con quali argomenti, rispondendo in JSON conforme allo schema che dichiari.',
+        resources: [
+          {
+            label: 'A Comprehensive Guide to Function Calling in LLMs',
+            url: 'https://thenewstack.io/a-comprehensive-guide-to-function-calling-in-llms/',
+            type: 'article',
+            note: 'Guida completa al funzionamento del function calling.',
+          },
+          {
+            label: 'Function Calling with LLMs — Prompt Engineering Guide',
+            url: 'https://www.promptingguide.ai/applications/function_calling',
+            type: 'article',
+            note: 'Come dichiarare le funzioni e gestire il loop di chiamata.',
+          },
+          {
+            label: 'LLM Function Calling — AI Tools Deep Dive',
+            url: 'https://www.youtube.com/watch?v=gMeTK6zzaO4',
+            type: 'video',
+            note: 'Spiegazione video del meccanismo dei tool/function call.',
+          },
+        ],
+      },
+    ],
+  },
 ]
 
 /** Solo le sezioni navigabili (con rotta). */

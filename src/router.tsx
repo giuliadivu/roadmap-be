@@ -1,47 +1,51 @@
 import type { ComponentType } from 'react'
-import { createBrowserRouter } from 'react-router'
 import type { RouteObject } from 'react-router'
-import { roadmap } from './data/roadmap'
+import { createBrowserRouter } from 'react-router'
 import { RootLayout } from './components/layout/RootLayout'
+import { roadmap } from './data/roadmap'
 import Home from './pages/Home'
 import NotFound from './pages/NotFound'
-import Introduction from './pages/sections/introduction/Introduction'
-import HowDoesTheInternetWork from './pages/sections/introduction/HowDoesTheInternetWork'
-import WhatIsHttp from './pages/sections/introduction/WhatIsHttp'
-import WhatIsDomainName from './pages/sections/introduction/WhatIsDomainName'
-import WhatIsHosting from './pages/sections/introduction/WhatIsHosting'
-import DnsAndHowItWorks from './pages/sections/introduction/DnsAndHowItWorks'
-import BrowsersAndHowTheyWork from './pages/sections/introduction/BrowsersAndHowTheyWork'
+import Caching from './pages/sections/caching/Caching'
+import HttpCaching from './pages/sections/caching/HttpCaching'
+import Memcached from './pages/sections/caching/Memcached'
+import Redis from './pages/sections/caching/Redis'
+import Browsers from './pages/sections/frontend-basics/Browsers'
+import Css from './pages/sections/frontend-basics/Css'
 import FrontendBasics from './pages/sections/frontend-basics/FrontendBasics'
 import Html from './pages/sections/frontend-basics/Html'
-import Css from './pages/sections/frontend-basics/Css'
 import JavaScript from './pages/sections/frontend-basics/JavaScript'
-import Browsers from './pages/sections/frontend-basics/Browsers'
-import RelationalDatabases from './pages/sections/relational-databases/RelationalDatabases'
-import Migrations from './pages/sections/relational-databases/Migrations'
-import NPlusOne from './pages/sections/relational-databases/NPlusOne'
-import LearnAboutApis from './pages/sections/learn-about-apis/LearnAboutApis'
-import ApiStyles from './pages/sections/learn-about-apis/ApiStyles'
-import OpenApiSpecs from './pages/sections/learn-about-apis/OpenApiSpecs'
-import Authentication from './pages/sections/learn-about-apis/Authentication'
-import WebSecurity from './pages/sections/learn-about-apis/WebSecurity'
-import HashingAlgorithms from './pages/sections/learn-about-apis/HashingAlgorithms'
+import FunctionCalling from './pages/sections/integration-patterns/FunctionCalling'
+import IntegrationPatterns from './pages/sections/integration-patterns/IntegrationPatterns'
+import Streaming from './pages/sections/integration-patterns/Streaming'
+import StructuredOutputs from './pages/sections/integration-patterns/StructuredOutputs'
+import BrowsersAndHowTheyWork from './pages/sections/introduction/BrowsersAndHowTheyWork'
+import DnsAndHowItWorks from './pages/sections/introduction/DnsAndHowItWorks'
+import HowDoesTheInternetWork from './pages/sections/introduction/HowDoesTheInternetWork'
+import Introduction from './pages/sections/introduction/Introduction'
+import WhatIsDomainName from './pages/sections/introduction/WhatIsDomainName'
+import WhatIsHosting from './pages/sections/introduction/WhatIsHosting'
+import WhatIsHttp from './pages/sections/introduction/WhatIsHttp'
 import ApiSecurityBestPractices from './pages/sections/learn-about-apis/ApiSecurityBestPractices'
-import Caching from './pages/sections/caching/Caching'
-import Redis from './pages/sections/caching/Redis'
-import Memcached from './pages/sections/caching/Memcached'
-import HttpCaching from './pages/sections/caching/HttpCaching'
-import LearnAboutWebServers from './pages/sections/learn-about-web-servers/LearnAboutWebServers'
-import Nginx from './pages/sections/learn-about-web-servers/Nginx'
+import ApiStyles from './pages/sections/learn-about-apis/ApiStyles'
+import Authentication from './pages/sections/learn-about-apis/Authentication'
+import HashingAlgorithms from './pages/sections/learn-about-apis/HashingAlgorithms'
+import LearnAboutApis from './pages/sections/learn-about-apis/LearnAboutApis'
+import OpenApiSpecs from './pages/sections/learn-about-apis/OpenApiSpecs'
+import WebSecurity from './pages/sections/learn-about-apis/WebSecurity'
 import Apache from './pages/sections/learn-about-web-servers/Apache'
 import Caddy from './pages/sections/learn-about-web-servers/Caddy'
+import LearnAboutWebServers from './pages/sections/learn-about-web-servers/LearnAboutWebServers'
 import MsIis from './pages/sections/learn-about-web-servers/MsIis'
-import LearnTheBasics from './pages/sections/learn-the-basics/LearnTheBasics'
-import HowLlmsWork from './pages/sections/learn-the-basics/HowLlmsWork'
+import Nginx from './pages/sections/learn-about-web-servers/Nginx'
 import AiVsTraditionalCoding from './pages/sections/learn-the-basics/AiVsTraditionalCoding'
 import Embeddings from './pages/sections/learn-the-basics/Embeddings'
-import Vectors from './pages/sections/learn-the-basics/Vectors'
+import HowLlmsWork from './pages/sections/learn-the-basics/HowLlmsWork'
+import LearnTheBasics from './pages/sections/learn-the-basics/LearnTheBasics'
 import Rags from './pages/sections/learn-the-basics/Rags'
+import Vectors from './pages/sections/learn-the-basics/Vectors'
+import Migrations from './pages/sections/relational-databases/Migrations'
+import NPlusOne from './pages/sections/relational-databases/NPlusOne'
+import RelationalDatabases from './pages/sections/relational-databases/RelationalDatabases'
 
 /**
  * Registry slug → componente di pagina.
@@ -56,6 +60,7 @@ const sectionComponents: Record<string, ComponentType> = {
   caching: Caching,
   'learn-about-web-servers': LearnAboutWebServers,
   'learn-the-basics': LearnTheBasics,
+  'integration-patterns': IntegrationPatterns,
 }
 
 const topicComponents: Record<string, ComponentType> = {
@@ -89,6 +94,9 @@ const topicComponents: Record<string, ComponentType> = {
   'learn-the-basics/embeddings': Embeddings,
   'learn-the-basics/vectors': Vectors,
   'learn-the-basics/rags': Rags,
+  'integration-patterns/streaming': Streaming,
+  'integration-patterns/structured-outputs': StructuredOutputs,
+  'integration-patterns/function-calling': FunctionCalling,
 }
 
 /** Genera le rotte delle sezioni navigabili a partire dalla config. */

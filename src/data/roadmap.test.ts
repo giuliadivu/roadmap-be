@@ -101,6 +101,16 @@ describe('roadmap config', () => {
     ])
   })
 
+  it('Integration Patterns ha streaming, structured-outputs e function-calling', () => {
+    const section = getSection('integration-patterns')
+    expect(section?.status).toBe('available')
+    expect(section?.topics?.map((t) => t.slug)).toEqual([
+      'streaming',
+      'structured-outputs',
+      'function-calling',
+    ])
+  })
+
   it('ha slug di sezione univoci', () => {
     const slugs = roadmap.map((s) => s.slug)
     expect(new Set(slugs).size).toBe(slugs.length)
